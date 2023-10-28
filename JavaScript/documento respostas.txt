@@ -1,0 +1,19 @@
+﻿3) Qual a ordem dos prints no console? 
+Resposta:
+
+A função é: c
+A função é: d
+
+
+4) Existe algum erro nesse código? Se sim, comente sobre?
+Resposta:
+
+Erro de compilação não existe, o código é executável. Mas a implementação possui alguns problemas quanto ao resultado esperado.
+Nós temos a função a() que contém 4 funções para ser executadas. Vamos analisar método a método na ordem da própria função a():
+
+O função b() é chamado e logo já retorna, com isso não é executado o alertUser que contém na própria função. Isso não está bem implementado, pois o alertUser deveria estar antes do “return”, a não ser que não queira que o alertUser não seja chamado.
+
+A função c() não está bem implementado também, pois contém código a ser executado após a promessa resolvida. Não é uma boa prática, pois se espera que uma promessa seja resolvida após a execução de todo o código que está contido nela. 
+Além disso, a promessa está implementada junto de um await, o que se espera que a função c() seja executado antes da função d(), mas como a promessa da função c() é resolvida antes da sua execução por completo, não é garantido que as funções sejam executadas na ordem correta.
+
+A função d() não resolve a promessa. Dessa forma, a função a() fica em espera e o alertUser contido ao final da função a() nunca vai ser chamado.

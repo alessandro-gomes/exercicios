@@ -1,0 +1,5 @@
+Banco de dados utilizado: Oracle.
+
+Lembrando que os bancos de dados (Oracle, MySQL e etc) tem diferenças sutis nos comando e sintaxe entre si. 
+
+Eu também tenho experiencia com MySQL.
